@@ -1,19 +1,21 @@
 package ch.bbw.shop.cart;
 
+import java.util.UUID;
+
 public class Token {
 	
-	private String id;
+	private UUID uuid;
 
 	public Token() {
 		super();
-		this.id = String.valueOf(this.hashCode());
+		this.uuid = UUID.randomUUID();
 	}
 
-	public String getId() {
-		return id;
+	public UUID getId() {
+		return uuid;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setId(UUID uuid) {
+		this.uuid = uuid;
 	}
 
 }
