@@ -57,4 +57,10 @@ public class Cart {
 			}
 		}
 	}
+
+	public void delAllArticles(Article article) {
+		while (cartEntries.containsKey(article.getNumber())) {
+			delArticle(article);
+		}
+	}
 }

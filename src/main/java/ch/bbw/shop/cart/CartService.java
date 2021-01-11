@@ -71,4 +71,18 @@ public class CartService {
 		}
 		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
+
+	@DeleteMapping("/{id}/{token}/all")
+	public ResponseEntity<Cart> delAllArticlesFromCart(@PathVariable("token")String tokenId, @PathVariable("id")int articleId) {
+		Optional<Cart> optCart = cartDAO.getCartByTokenId(tokenId);
+		if (optCart.isPresent()) {
+			Optional<Article> optArticle = articleDAO.getArticleById(articleId);
+			if (optArticle.isPresent()) {
+				Cart cart = optCart.get();
+				cart.delAllArticles(optArticle.get());
+				return ResponseEntity.ok(cart);
+			}
+		}
+		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	}
 }
