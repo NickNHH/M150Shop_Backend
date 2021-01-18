@@ -4,17 +4,17 @@ import java.util.UUID;
 
 public class Token {
 	
-	private UUID uuid;
+	private String uuid;
 
 	public Token() {
 		super();
-		this.uuid = UUID.randomUUID();
+		this.uuid = UUID.randomUUID().toString();
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return uuid;
 	}
-	public void setId(UUID uuid) {
+	public void setId(String uuid) {
 		this.uuid = uuid;
 	}
 
