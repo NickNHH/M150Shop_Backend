@@ -29,11 +29,11 @@ public class ArticleDAO {
 		);
 
 		articles = new ArrayList<>();
-		articles.add(new Article(1, "0001", "Java T-Shirt", "Ein wunderschönes T-Shirt (unisex)", 39.90));
-		articles.add(new Article(2, "0002", "Java Tasse", "3dl Tasse für langen heissen Kaffeegenuss", 12.90));
-		articles.add(new Article(3, "0003", "Java Bohnen", "500g original Java Bohnen (direktimport)", 15.00));
-		articles.add(new Article(4, "0004", "BBW Sticker rund", "Klassische BBW Sticker (Variante rund 5cm Durchmesser)", 15.00));
-		articles.add(new Article(5, "0005", "BBW Sticker quadratisch", "Klassische BBW Sticker (Variante eckig 4 x 3cm)", 15.00));
+		articles.add(new Article(1, "0001", "Java T-Shirt", "Ein wunderschönes T-Shirt (unisex)", 39.90, null));
+		articles.add(new Article(2, "0002", "Java Tasse", "3dl Tasse für langen heissen Kaffeegenuss", 12.90, null));
+		articles.add(new Article(3, "0003", "Java Bohnen", "500g original Java Bohnen (direktimport)", 15.00, null));
+		articles.add(new Article(4, "0004", "BBW Sticker rund", "Klassische BBW Sticker (Variante rund 5cm Durchmesser)", 15.00, null));
+		articles.add(new Article(5, "0005", "BBW Sticker quadratisch", "Klassische BBW Sticker (Variante eckig 4 x 3cm)", 15.00, null));
 
 		articles.get(0).setImage("images/0001.jpg");
 		articles.get(1).setImage("images/0002.jpg");

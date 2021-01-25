@@ -11,12 +11,13 @@ public class Article {
     private String image;
     private SizeGroup sizeGroup;
 
-    public Article(int id, String number, String text, String description, double price) {
+    public Article(int id, String number, String text, String description, double price, SizeGroup sizeGroup) {
         this.id = id;
         this.number = number;
         this.text = text;
         this.description = description;
         this.price = price;
+        this.sizeGroup = sizeGroup;
     }
 
     public int getId() {
